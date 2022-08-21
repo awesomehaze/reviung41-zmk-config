@@ -58,18 +58,18 @@
                 <&macro_tap>,
                 <&kp BACKSPACE>;
         };
-    	back: back {
-    	            compatible = "zmk,behavior-macro";
-    	            label = "back";
-    	            #binding-cells = <0>;
-    	            bindings =
-    	                <&macro_press>,
-    	                <&kp LEFT_ALT>,
-    	                <&macro_tap>,
-    	                <&kp LEFT>,
-    	                <&macro_release>,
-    	                <&kp LEFT_ALT>;
-    	};
+        back: back {
+            compatible = "zmk,behavior-macro";
+            label = "back";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
         undo: undo {
             compatible = "zmk,behavior-macro";
             label = "undo";
@@ -218,10 +218,10 @@
 
         NAVI_LAYER {
             bindings = <
-       &trans  &kp ESC        &trans           &back   &forward  &trans             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
-       &trans   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
- &kp CAPSLOCK   &trans        &trans          &trans     &trans  &trans                  &trans    &trans    &trans     &trans       &del_all              &trans
-                                              &trans     &trans          &kp RET                    &mo 4     &mo 4
+       &trans      &kp ESC        &trans           &back   &forward   &trans             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
+       &trans  &select_all  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &ctrl_d           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
+ &kp CAPSLOCK        &undo          &cut           &copy     &paste   &trans                  &trans    &trans    &trans     &trans       &del_all              &trans
+                                                  &trans     &trans           &kp RET                    &mo 4     &mo 4
             >;
         };
 
