@@ -28,6 +28,16 @@
             >;
         };
 
+        NAVI_LAYER {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans          &trans          &trans  &trans
+            >;
+        };
+
+
         lower_layer {
             // ----------------------------------------------------------------------------------
             // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
@@ -57,16 +67,6 @@
                                  &trans     &mo 3            &kp BSPC          &trans  &trans
             >;
         };
-
-        NAVI_LAYER {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans          &trans          &trans  &trans
-            >;
-        };
-
 
         adjust_layer {
             // -----------------------------------------------------------------------------------------
