@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/led/led.h>  // temporary hotfix for rgb strip
 
 / {
     macros {
@@ -96,10 +95,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-    &kp RIGHT_WIN   &kp Q   &kp W     &kp F   &kp P   &kp G              &kp J   &kp L      &kp U    &kp Y  &kp SEMI  &kp BACKSPACE
- &kp LEFT_CONTROL   &kp A   &kp R     &kp S   &kp T   &kp D              &kp H   &kp N      &kp E    &kp I     &kp O        &kp SQT
-        &kp LSHFT   &kp Z   &kp X     &kp C   &kp V   &kp B              &kp K   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                                   &kp LALT   &mo 3          &kp SPACE           &mo 1      &mo 2
+ &kp RIGHT_WIN   &kp Q   &kp W     &kp F             &kp P   &kp G              &kp J   &kp L      &kp U    &kp Y  &kp SEMI  &kp BACKSPACE
+         &mo 3   &kp A   &kp R     &kp S             &kp T   &kp D              &kp H   &kp N      &kp E    &kp I     &kp O        &kp SQT
+     &kp LSHFT   &kp Z   &kp X     &kp C             &kp V   &kp B              &kp K   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                                &kp LALT  &kp LEFT_CONTROL          &kp SPACE           &mo 1      &mo 2
             >;
         };
 
@@ -112,9 +111,9 @@
 
             bindings = <
  &trans  &kp EXCL         &kp AT  &kp HASH        &kp DLLR         &kp PRCNT                  &kp CARET         &kp AMPS    &kp ASTERISK   &kp LPAR   &kp RPAR         &trans
-  &mo 1  &kp PIPE  &kp BACKSLASH  &kp LBRC  &kp LEFT_BRACE  &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp MINUS   &kp PLUS  &kp GRAVE      &kp TILDE
+ &trans  &kp PIPE  &kp BACKSLASH  &kp LBRC  &kp LEFT_BRACE  &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp MINUS   &kp PLUS  &kp GRAVE      &kp TILDE
  &trans    &trans         &trans    &trans          &trans            &trans                     &trans           &trans  &kp UNDERSCORE  &kp EQUAL  &kp PSCRN  &mt RSHFT RET
-                                    &trans           &mo 3                    &trans                              &trans          &trans
+                                    &trans          &trans                    &trans                              &trans          &trans
             >;
         };
 
@@ -129,16 +128,16 @@
  &trans   &kp N1   &kp N2  &kp N3  &kp N4  &kp N5                   &kp N6       &kp N7  &kp N8  &kp N9   &kp N0  &trans
  &trans   &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                   &kp F6       &kp F7  &kp F8  &kp F9  &kp F10  &trans
  &trans  &kp F11  &kp F12  &trans  &trans  &trans          &kp PRINTSCREEN  &kp K_SLEEP  &trans  &trans   &trans  &trans
-                           &trans   &mo 3          &trans                        &trans  &trans
+                           &trans  &trans          &trans                        &trans  &trans
             >;
         };
 
         NAVI_LAYER {
             bindings = <
- &trans   &kp ESC        &trans           &back   &forward  &trans             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
- &trans    &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
- &trans  &kp CAPS        &trans          &trans     &trans  &trans                  &trans    &trans    &trans     &trans       &del_all              &trans
-                                         &trans     &trans          &kp RET                    &mo 4     &mo 4
+       &trans  &kp ESC        &trans           &back   &forward  &trans             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
+       &trans   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
+ &kp CAPSLOCK   &trans        &trans          &trans     &trans  &trans                  &trans    &trans    &trans     &trans       &del_all              &trans
+                                              &trans     &trans          &kp RET                    &mo 4     &mo 4
             >;
         };
 
