@@ -93,7 +93,7 @@
  &trans   &kp ESC        &trans           &back   &forward  &trans             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL  &kp INSERT
  &trans    &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_MENU
  &trans  &kp CAPS        &trans          &trans     &trans  &trans                  &trans    &trans    &trans     &trans         &trans      &trans
-                                         &trans     &trans          &kp RET                   &trans    &trans
+                                         &trans     &trans          &kp RET                    &mo 4     &mo 4
             >;
         };
 
