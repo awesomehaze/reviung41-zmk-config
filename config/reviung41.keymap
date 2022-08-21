@@ -58,6 +58,16 @@
             >;
         };
 
+        NAVI_LAYER {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans          &trans          &trans  &trans
+            >;
+        };
+
+
         adjust_layer {
             // -----------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
@@ -73,13 +83,5 @@
             >;
         };
 
-        NAVI_LAYER {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans          &trans          &trans  &trans
-            >;
-        };
     };
 };
