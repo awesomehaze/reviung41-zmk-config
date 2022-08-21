@@ -68,6 +68,11 @@
             bindings = <&kp RIGHT_ALT>;
             key-positions = <35 23>;
         };
+
+        io_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <21 22>;
+        };
     };
 
     keymap {
