@@ -38,7 +38,7 @@
         };
         umlaut: umlaut {
             compatible = "zmk,behavior-macro";
-            label = "new_macro";
+            label = "umlaut";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
@@ -46,7 +46,7 @@
         };
         del_all: del_all {
             compatible = "zmk,behavior-macro";
-            label = "new_macro";
+            label = "del_all";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
@@ -57,6 +57,90 @@
                 <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp BACKSPACE>;
+        };
+    	back: back {
+    	            compatible = "zmk,behavior-macro";
+    	            label = "back";
+    	            #binding-cells = <0>;
+    	            bindings =
+    	                <&macro_press>,
+    	                <&kp LEFT_ALT>,
+    	                <&macro_tap>,
+    	                <&kp LEFT>,
+    	                <&macro_release>,
+    	                <&kp LEFT_ALT>;
+    	};
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            label = "undo";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            label = "cut";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            label = "copy";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            label = "paste";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        ctrl_d: ctrl_d {
+            compatible = "zmk,behavior-macro";
+            label = "ctrl_d";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        select_all: select_all {
+            compatible = "zmk,behavior-macro";
+            label = "select_all";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
     };
 
