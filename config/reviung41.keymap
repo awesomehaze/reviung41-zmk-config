@@ -10,6 +10,33 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        back: back {
+            compatible = "zmk,behavior-macro";
+            label = "back";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+        forward: forward {
+            compatible = "zmk,behavior-macro";
+            label = "forward";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_press>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -30,7 +57,7 @@
 
         NAVI_LAYER {
             bindings = <
- &trans  &trans        &trans          &trans     &trans  &trans            &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL  &kp INSERT
+ &trans  &trans        &trans           &back   &forward  &trans            &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL  &kp INSERT
  &trans  &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans          &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_MENU
  &trans  &trans        &trans          &trans     &trans  &trans                 &trans    &trans    &trans     &trans         &trans      &trans
                                        &trans     &trans          &trans                   &trans    &trans
