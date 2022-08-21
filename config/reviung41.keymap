@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 / {
     macros {
@@ -241,10 +240,10 @@
 
         NAVI_LAYER {
             bindings = <
-       &trans      &kp ESC        &trans           &back   &forward   &mkp LCLK        &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
-       &trans  &select_all  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &ctrl_d           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
- &kp CAPSLOCK        &undo          &cut           &copy     &paste   &mkp RCLK               &trans    &trans    &trans     &trans       &del_all              &trans
-                                                  &trans     &trans           &kp RET                    &mo 4     &mo 4
+       &trans      &kp ESC        &trans           &back   &forward  &mkp LCLK             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
+       &trans  &select_all  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &ctrl_d           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
+ &kp CAPSLOCK        &undo          &cut           &copy     &paste  &mkp RCLK                  &trans    &trans    &trans     &trans       &del_all              &trans
+                                                  &trans     &trans             &kp RET                    &mo 4     &mo 4
             >;
         };
 
