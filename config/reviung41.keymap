@@ -172,8 +172,8 @@
                 <&macro_tap>,
                 <&kp COMMA &kp SPACE &kp MINUS>;
 
-            tap-ms = <10>;
-            wait-ms = <10>;
+            tap-ms = <5>;
+            wait-ms = <5>;
         };
         plural_umlaut: plural_umlaut {
             compatible = "zmk,behavior-macro";
@@ -183,8 +183,8 @@
                 <&macro_tap>,
                 <&kp COMMA &kp SPACE &kp DOUBLE_QUOTES &kp MINUS>;
 
-            tap-ms = <10>;
-            wait-ms = <10>;
+            tap-ms = <5>;
+            wait-ms = <5>;
         };
     };
 
