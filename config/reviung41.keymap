@@ -5,11 +5,11 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     macros {
@@ -27,6 +27,7 @@
                 <&macro_release>,
                 <&kp LEFT_ALT>;
         };
+
         forward: forward {
             compatible = "zmk,behavior-macro";
             label = "forward";
@@ -36,21 +37,21 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
         };
+
         umlaut: umlaut {
             compatible = "zmk,behavior-macro";
             label = "umlaut";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings =
-                <&macro_tap>,
-                <&kp RIGHT_ALT &kp DOUBLE_QUOTES>;
+            bindings = <&macro_tap>, <&kp RIGHT_ALT &kp DOUBLE_QUOTES>;
         };
+
         del_all: del_all {
             compatible = "zmk,behavior-macro";
             label = "del_all";
@@ -67,20 +68,7 @@
                 <&macro_tap>,
                 <&kp BACKSPACE>;
         };
-        back: back {
-            compatible = "zmk,behavior-macro";
-            label = "back";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-        };
+
         undo: undo {
             compatible = "zmk,behavior-macro";
             label = "undo";
@@ -95,6 +83,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         cut: cut {
             compatible = "zmk,behavior-macro";
             label = "cut";
@@ -109,6 +98,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         copy: copy {
             compatible = "zmk,behavior-macro";
             label = "copy";
@@ -123,6 +113,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         paste: paste {
             compatible = "zmk,behavior-macro";
             label = "paste";
@@ -137,6 +128,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         ctrl_d: ctrl_d {
             compatible = "zmk,behavior-macro";
             label = "ctrl_d";
@@ -151,6 +143,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         select_all: select_all {
             compatible = "zmk,behavior-macro";
             label = "select_all";
@@ -165,17 +158,17 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         plural: plural {
             compatible = "zmk,behavior-macro";
             label = "new_macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp COMMA &kp SPACE &kp MINUS>;
+            bindings = <&macro_tap>, <&kp COMMA &kp SPACE &kp MINUS>;
 
             tap-ms = <5>;
             wait-ms = <5>;
         };
+
         umlaut_plural: umlaut_plural {
             compatible = "zmk,behavior-macro";
             label = "new_macro";
@@ -219,10 +212,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
- &kp RIGHT_WIN   &kp Q   &kp W     &kp F             &kp P   &kp G              &kp J   &kp L      &kp U    &kp Y  &kp SEMI  &kp BACKSPACE
-         &mo 3   &kp A   &kp R     &kp S             &kp T   &kp D              &kp H   &kp N      &kp E    &kp I     &kp O        &kp SQT
-     &kp LSHFT   &kp Z   &kp X     &kp C             &kp V   &kp B              &kp K   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                                &kp LALT  &kp LEFT_CONTROL          &kp SPACE           &mo 1      &mo 2
+&kp RIGHT_WIN  &kp Q  &kp W  &kp F     &kp P             &kp G             &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &kp BACKSPACE
+&mo 3          &kp A  &kp R  &kp S     &kp T             &kp D             &kp H  &kp N  &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp V             &kp B             &kp K  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                             &kp LALT  &kp LEFT_CONTROL         &kp SPACE         &mo 1  &mo 2
             >;
         };
 
@@ -234,10 +227,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
- &trans        &kp EXCL   &kp AT  &kp HASH        &kp DLLR         &kp PRCNT                  &kp CARET         &kp AMPS    &kp ASTERISK   &kp LPAR       &kp RPAR         &trans
- &trans          &trans   &trans  &kp PIPE  &kp LEFT_BRACE  &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp MINUS   &kp PLUS      &kp GRAVE      &kp TILDE
- &trans  &umlaut_plural  &plural    &trans          &trans            &trans                     &trans           &trans  &kp UNDERSCORE  &kp EQUAL  &kp BACKSLASH  &mt RSHFT RET
-                                    &trans          &trans                    &trans                              &trans          &trans
+&trans  &kp EXCL        &kp AT   &kp HASH  &kp DLLR        &kp PRCNT                 &kp CARET          &kp AMPS         &kp ASTERISK    &kp LPAR   &kp RPAR       &trans
+&trans  &trans          &trans   &kp PIPE  &kp LEFT_BRACE  &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS       &kp PLUS   &kp GRAVE      &kp TILDE
+&trans  &umlaut_plural  &plural  &trans    &trans          &trans                    &trans             &trans           &kp UNDERSCORE  &kp EQUAL  &kp BACKSLASH  &mt RSHFT RET
+                                 &trans    &trans                            &trans                     &trans           &trans
             >;
         };
 
@@ -249,19 +242,19 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
- &trans   &kp N1   &kp N2  &kp N3  &kp N4  &kp N5                   &kp N6       &kp N7  &kp N8  &kp N9   &kp N0  &trans
- &trans   &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                   &kp F6       &kp F7  &kp F8  &kp F9  &kp F10  &trans
- &trans  &kp F11  &kp F12  &trans  &trans  &trans          &kp PRINTSCREEN  &kp K_SLEEP  &trans  &trans   &trans  &trans
-                           &trans  &trans          &trans                        &trans  &trans
+&trans  &kp N1   &kp N2   &kp N3  &kp N4  &kp N5          &kp N6           &kp N7       &kp N8  &kp N9  &kp N0   &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5          &kp F6           &kp F7       &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans          &kp PRINTSCREEN  &kp K_SLEEP  &trans  &trans  &trans   &trans
+                          &trans  &trans          &trans                   &trans       &trans
             >;
         };
 
         NAVI_LAYER {
             bindings = <
-       &trans      &kp ESC     &mkp 0x01           &back   &forward  &mkp 0x02             &kp PAGE_UP  &kp HOME    &kp UP    &kp END        &kp DEL          &kp INSERT
-       &trans  &select_all  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &ctrl_d           &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
- &kp CAPSLOCK        &undo          &cut           &copy     &paste     &trans                  &trans    &trans    &trans     &trans       &del_all              &trans
-                                                  &trans     &trans             &kp RET                    &mo 4     &mo 4
+&trans        &kp ESC      &mkp 0x01     &back           &forward   &mkp 0x02           &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &kp DEL        &kp INSERT
+&trans        &select_all  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &ctrl_d             &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp K_CONTEXT_MENU
+&kp CAPSLOCK  &undo        &cut          &copy           &paste     &trans              &trans         &trans    &trans    &trans     &del_all       &trans
+                                         &trans          &trans                &kp RET                 &mo 4     &mo 4
             >;
         };
 
@@ -273,10 +266,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
- &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF              &none   &rgb_ug RGB_TOG                &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4
- &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &ext_power EP_OFF  &ext_power EP_ON          &kp K_PLAY_PAUSE  &kp K_PREVIOUS    &kp K_NEXT    &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP
-          &trans            &none            &none            &none              &none             &none                    &reset     &bootloader  &out OUT_USB  &out OUT_BLE       &out OUT_TOG            &none
-                                                             &trans             &trans                    &tog 4                            &trans        &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none              &rgb_ug RGB_TOG           &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &ext_power EP_OFF  &ext_power EP_ON          &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_PP      &kp K_PREV    &kp K_NEXT
+&trans           &none            &none            &none            &none              &none                     &sys_reset  &bootloader   &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &none
+                                                   &trans           &trans                               &tog 4              &trans        &trans
             >;
         };
     };
